@@ -1,7 +1,12 @@
 # robots.txt for Siddharth Shibu Portfolio
 # https://siddharth.design
 
+# Allow all crawlers full access
 User-agent: *
 Allow: /
 
-Sitemap: https://alexrivera.design/sitemap.xml
+# Crawl delay for polite crawling
+Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://siddharth.design/sitemap.xml
