@@ -1,0 +1,7 @@
+# robots.txt for Siddharth Shibu Portfolio
+# https://siddharth.design
+
+User-agent: *
+Allow: /
+
+Sitemap: https://alexrivera.design/sitemap.xml

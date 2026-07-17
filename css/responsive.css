@@ -1,0 +1,443 @@
+/* ============================================
+   RESPONSIVE.CSS — DigiArtist Portfolio
+   Responsive Breakpoints
+   ============================================ */
+
+/* ----- XXL (1400px and below) ----- */
+@media (max-width: 1400px) {
+  .hero-title {
+    font-size: var(--text-6xl);
+  }
+}
+
+/* ----- XL (1200px and below) ----- */
+@media (max-width: 1200px) {
+  .section {
+    padding: var(--space-4xl) 0;
+  }
+  
+  .hero-title {
+    font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+  }
+  
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
+/* ----- LG (1024px and below) ----- */
+@media (max-width: 1024px) {
+  .about-grid {
+    gap: var(--space-3xl);
+  }
+  
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .process-timeline::before {
+    left: 20px;
+  }
+  
+  .process-step:nth-child(odd),
+  .process-step:nth-child(even) {
+    flex-direction: row;
+    text-align: left;
+    padding-left: 60px;
+  }
+  
+  .process-step-number {
+    left: 0;
+    transform: none;
+  }
+  
+  .process-step:nth-child(odd) .process-step-content,
+  .process-step:nth-child(even) .process-step-content {
+    width: 100%;
+    margin: 0;
+  }
+  
+  .pricing-card.featured {
+    transform: scale(1.02);
+  }
+  
+  .pricing-card.featured:hover {
+    transform: scale(1.02) translateY(-4px);
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ----- MD (768px and below) ----- */
+@media (max-width: 768px) {
+  :root {
+    --text-5xl: 2.8rem;
+    --text-4xl: 2.2rem;
+    --text-3xl: 1.8rem;
+  }
+  
+  .container {
+    padding: 0 var(--space-lg);
+  }
+  
+  .section {
+    padding: var(--space-3xl) 0;
+  }
+  
+  .section-header {
+    margin-bottom: var(--space-3xl);
+  }
+  
+  .section-label::before,
+  .section-label::after {
+    width: 20px;
+  }
+  
+  /* Navbar */
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background: rgba(9, 9, 9, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-xl);
+    padding: var(--space-2xl);
+    transform: translateX(100%);
+    transition: transform var(--transition-base);
+    border-left: 1px solid var(--color-border);
+  }
+  
+  .navbar-links.active {
+    transform: translateX(0);
+  }
+  
+  .navbar-links a {
+    font-size: var(--text-lg);
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  /* Hero */
+  .hero {
+    min-height: 90vh;
+  }
+  
+  .hero-content {
+    padding: var(--space-3xl) var(--space-lg);
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .hero-buttons .btn {
+    justify-content: center;
+  }
+  
+  .hero-shape {
+    display: none;
+  }
+  
+  .hero-scroll {
+    bottom: var(--space-lg);
+  }
+  
+  /* About */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+  
+  .about-image-wrapper {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  
+  .about-experience-badge {
+    width: 90px;
+    height: 90px;
+    right: -10px;
+    bottom: -10px;
+  }
+  
+  .about-experience-badge .number {
+    font-size: var(--text-xl);
+  }
+  
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+  
+  .stat-number {
+    font-size: var(--text-2xl);
+  }
+  
+  /* Skills */
+  .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xs) var(--space-lg);
+  }
+  
+  /* Portfolio */
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+  }
+  
+  .portfolio-filters {
+    gap: var(--space-xs);
+  }
+  
+  .portfolio-filter {
+    padding: 6px 14px;
+    font-size: var(--text-xs);
+  }
+  
+  /* Modal */
+  .modal-content {
+    border-radius: var(--radius-lg);
+  }
+  
+  .modal-body {
+    padding: var(--space-lg);
+  }
+  
+  .modal-meta {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Process */
+  .process-step-content {
+    padding: var(--space-md);
+  }
+  
+  /* Services */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  
+  .service-card {
+    padding: var(--space-xl);
+  }
+  
+  /* Pricing */
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .pricing-card.featured {
+    transform: none;
+  }
+  
+  .pricing-card.featured:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* Testimonials */
+  .testimonial-card {
+    padding: var(--space-xl);
+  }
+  
+  .testimonial-text {
+    font-size: var(--text-base);
+  }
+  
+  /* FAQ */
+  .faq-question {
+    padding: var(--space-md) var(--space-lg);
+    font-size: var(--text-sm);
+  }
+  
+  .faq-answer-inner {
+    padding: 0 var(--space-lg) var(--space-md);
+    font-size: var(--text-sm);
+  }
+  
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: center;
+  }
+  
+  .back-to-top {
+    bottom: var(--space-lg);
+    right: var(--space-lg);
+  }
+  
+
+}
+
+/* ----- SM (480px and below) ----- */
+@media (max-width: 480px) {
+  :root {
+    --text-5xl: 2.2rem;
+    --text-4xl: 1.8rem;
+    --text-3xl: 1.5rem;
+    --text-2xl: 1.25rem;
+  }
+  
+  .container {
+    padding: 0 var(--space-md);
+  }
+  
+  .section {
+    padding: var(--space-2xl) 0;
+  }
+  
+  .section-header {
+    margin-bottom: var(--space-2xl);
+  }
+  
+  .hero-badge {
+    font-size: 10px;
+    padding: 6px 14px;
+  }
+  
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+  
+  .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xs) var(--space-md);
+  }
+  
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pricing-grid {
+    max-width: 100%;
+  }
+  
+  .contact-social {
+    flex-wrap: wrap;
+  }
+  
+  .modal-meta {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .footer-grid {
+    text-align: center;
+  }
+  
+  .footer-desc {
+    margin: 0 auto;
+  }
+  
+  .footer-links {
+    align-items: center;
+  }
+}
+
+/* ----- Landscape phones & small devices ----- */
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: var(--text-3xl);
+  }
+  
+  .about-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .modal-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ----- Reduced Motion ----- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale {
+    opacity: 1;
+    transform: none;
+  }
+  
+  .hero-orb {
+    animation: none;
+  }
+  
+  .hero-shape {
+    animation: none;
+  }
+  
+  .clients-track {
+    animation: none;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ----- Print Styles ----- */
+@media print {
+  .navbar,
+  .hero-scroll,
+  .back-to-top,
+  .loading-screen,
+  .scroll-progress {
+    display: none !important;
+  }
+  
+  .section {
+    padding: var(--space-xl) 0;
+    page-break-inside: avoid;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .pricing-card.featured {
+    border-color: #000;
+  }
+}
